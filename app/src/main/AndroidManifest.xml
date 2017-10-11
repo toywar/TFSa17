@@ -18,20 +18,29 @@
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
-        <activity android:name=".ExplicitActivityOne"
+        <activity
+            android:name=".ExplicitActivityOne"
             android:label="Open with Red background">
             <intent-filter>
                 <action android:name="ru.toywar.android.ACTION" />
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".ExplicitActivityTwo"
-            android:label="Open with Green background">
-            <intent-filter>
-                <action android:name="ru.toywar.android.ACTION" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ExplicitActivityTwo"
+            android:label="Open with Green background">
+            <intent-filter>
+                <action android:name="ru.toywar.android.ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityFlags"
+            android:label="Test Activity flags" />
+        <activity android:name=".LastActivity"
+            android:label="Последняя Activity"></activity>
     </application>
 
 </manifest>

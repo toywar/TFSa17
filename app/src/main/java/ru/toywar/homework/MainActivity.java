@@ -31,7 +31,16 @@ public class MainActivity extends AppCompatActivity {
                 String ACTION = "ru.toywar.android.ACTION";
                 Intent explicitIntent = new Intent();
                 explicitIntent.setAction(ACTION);
+
                 startActivity(explicitIntent);
+            }
+        });
+
+        Button button3 = findViewById(R.id.flagsButton);
+        button3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent flagsIntent = new Intent(v.getContext(), ActivityFlags.class);
+                startActivity(flagsIntent);
             }
         });
     }

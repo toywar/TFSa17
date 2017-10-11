@@ -3,4 +3,7 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="explName">Explicit Activity</string>
     <string name="implName">Implicit Activity</string>
+    <string name="activityflags">ActivityFlags</string>
+    <string name="activityText">Все Activity закроются после нажатия кнопки \"Логин\"</string>
+    <string name="login">Логин</string>
 </resources>
