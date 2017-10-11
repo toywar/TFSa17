@@ -24,5 +24,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(sendIntent);
             }
         });
+
+        Button button2 = findViewById(R.id.explButton);
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick (View v) {
+                String ACTION = "ru.toywar.android.ACTION";
+                Intent explicitIntent = new Intent();
+                explicitIntent.setAction(ACTION);
+                startActivity(explicitIntent);
+            }
+        });
     }
 }
