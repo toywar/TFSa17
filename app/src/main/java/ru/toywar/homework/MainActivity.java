@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +42,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent flagsIntent = new Intent(v.getContext(), ActivityFlags.class);
                 startActivity(flagsIntent);
+            }
+        });
+
+        Button button4 = findViewById(R.id.sendTextButton);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText sendText = findViewById(R.id.editText);
+                String text = sendText.getText().toString();
+
+                Intent intent = new Intent(v.getContext(), ReceiverActivity.class);
+                intent.putExtra("userText", text);
+                startActivity(intent);
             }
         });
     }

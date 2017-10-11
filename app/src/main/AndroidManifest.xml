@@ -39,8 +39,11 @@
         <activity
             android:name=".ActivityFlags"
             android:label="Test Activity flags" />
-        <activity android:name=".LastActivity"
-            android:label="Последняя Activity"></activity>
+        <activity
+            android:name=".LastActivity"
+            android:label="Последняя Activity" />
+        <activity android:name=".ReceiverActivity"
+            android:label="Полученный текст с MainActivity"></activity>
     </application>
 
 </manifest>
