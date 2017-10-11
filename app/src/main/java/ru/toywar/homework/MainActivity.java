@@ -1,13 +1,17 @@
 package ru.toywar.homework;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final int ACTIVITY_RESULT_CODE = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +58,23 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(v.getContext(), ReceiverActivity.class);
                 intent.putExtra("userText", text);
-                startActivity(intent);
+                startActivityForResult(intent, ACTIVITY_RESULT_CODE);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        TextView tw = findViewById(R.id.textViewResult);
+        if (requestCode == ACTIVITY_RESULT_CODE) {
+            if (resultCode == RESULT_OK) {
+                String message = data.getStringExtra("Ok");
+                tw.setText(message);
+            } else if (resultCode == RESULT_CANCELED) {
+                String message = data.getStringExtra("Cancel");
+                tw.setText(message);
+            }
+        }
     }
 }

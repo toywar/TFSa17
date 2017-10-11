@@ -7,6 +7,6 @@
     <string name="activityText">Все Activity закроются после нажатия кнопки \"Логин\"</string>
     <string name="login">Логин</string>
     <string name="sendTextButton">Ввод</string>
-    <string name="cancelButton">Отмена</string>
+    <string name="cancelButton">Cancel</string>
     <string name="okButton">OK</string>
 </resources>
