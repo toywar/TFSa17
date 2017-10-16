@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">homework</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enterText1">Введите первое число</string>
+    <string name="enterButton1">Ввод</string>
+    <string name="enterText2">Введите второе число</string>
 </resources>
