@@ -36,7 +36,7 @@ public class Fragment1 extends android.support.v4.app.Fragment {
     public void onViewCreated(final View view, Bundle savedInstanceState) {
         view.findViewById(R.id.buttonEnter1).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 EditText et1 = view.findViewById(R.id.textEnter1);
                 if (et1 != null) {
                     Double digit = Double.valueOf(et1.getText().toString());

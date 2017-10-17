@@ -36,11 +36,12 @@ public class Fragment2 extends android.support.v4.app.Fragment {
         Button button2 = view.findViewById(R.id.buttonEnter2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 EditText et2 = view.findViewById(R.id.textEnter2);
                 if (et2 != null) {
                     Double digit = Double.valueOf(et2.getText().toString());
                     fragmentListener.secondDigit(digit);
+                    fragmentListener.startFragment3();
                 }
             }
         });

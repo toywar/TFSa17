@@ -6,4 +6,9 @@
     <string name="enterText1">Введите первое число</string>
     <string name="enterButton1">Ввод</string>
     <string name="enterText2">Введите второе число</string>
+    <string name="buttonPlus">+</string>
+    <string name="buttonMinus">-</string>
+    <string name="buttonDivide">/</string>
+    <string name="buttonMultiply">*</string>
+    <string name="textResultAnnotation">Результат операции:</string>
 </resources>
