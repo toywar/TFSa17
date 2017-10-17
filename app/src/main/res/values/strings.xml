@@ -11,4 +11,8 @@
     <string name="buttonDivide">/</string>
     <string name="buttonMultiply">*</string>
     <string name="textResultAnnotation">Результат операции:</string>
+    <string name="frStack1">1</string>
+    <string name="frStack2">2</string>
+    <string name="frStack4">4</string>
+    <string name="frStack3">3</string>
 </resources>

@@ -3,6 +3,8 @@ package ru.toywar.homework;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends FragmentActivity implements FragmentListener {
 
@@ -16,6 +18,39 @@ public class MainActivity extends FragmentActivity implements FragmentListener {
         setContentView(R.layout.activity_main);
 
         startFragment1();
+
+        Button buttonFr1 = findViewById(R.id.button1);
+        Button buttonFr2 = findViewById(R.id.button2);
+        Button buttonFr3 = findViewById(R.id.button3);
+        Button buttonFr4 = findViewById(R.id.button4);
+
+        buttonFr1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startFragment1();
+            }
+        });
+
+        buttonFr2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startFragment2();
+            }
+        });
+
+        buttonFr3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startFragment3();
+            }
+        });
+
+        buttonFr4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startFragment4();
+            }
+        });
 
     }
 
