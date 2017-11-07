@@ -10,6 +10,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         case2();
         case3();
+        case4();
     }
 
     public void case2() {
@@ -66,5 +68,12 @@ public class MainActivity extends AppCompatActivity {
     public void case4() {
         Log.i("Homework", "=== Case 4 ===");
 
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(DateExample.class, new DateExampleSerializer())
+                .create();
+
+        DateExample dateExample = new DateExample(new Date(System.currentTimeMillis()));
+        String json = gson.toJson(dateExample);
+        Log.i("DateExample", "JSON: " + json);
     }
 }
